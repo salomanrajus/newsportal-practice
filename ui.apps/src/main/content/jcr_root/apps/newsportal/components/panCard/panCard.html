@@ -1,0 +1,65 @@
+<div class="pan">
+	
+    <!-- Gandhi watermark -->
+    <div class="gandhi-watermark">
+    	<img src="https://iili.io/CnnxsWX.png" height= 130px width= 100px>
+    </div>
+    
+    
+    <div class="pan-header">
+        <div class="hin-left">
+            <h2>आयकर विभाग</h2>
+            <h3>INCOME TAX DEPARTMENT</h3>
+        </div>
+        <img src="https://iili.io/CnnZx0G.png">
+        <div class="hin-right">
+            <h2>भारत सरकार</h2>
+            <h3>GOVT. OF INDIA</h3>
+        </div>
+    </div>
+
+    <div class="pan-body">
+        <div class="body-left">
+            <div class="photo_num">
+                <img src="${properties.dp}" alt="Profile Photo" />
+                <div class="num">
+                    <h3>स्थायी लेखा संख्या कार्ड</h3>
+                    <h4>Permanent Account Number Card</h4>
+                    <h3>${properties.panNum}</h3>
+                </div>
+            </div>
+
+            <div class="details">
+                <div class="field">
+                    <span class="label">नाम / Name</span>
+                    <div>${properties.name}</div>
+                </div>
+
+                <div class="field">
+                    <span class="label">पिता का नाम / Father's Name</span>
+                    <div>${properties.fathername}</div>
+                </div>
+
+                <div class="dob_sign">
+                    <div class="field">
+                        <span class="label label-dob">जन्म की तारीख / Date of Birth</span>
+                        <div>${'dd/MM/YYYY' @format=properties.dob}</div>
+                    </div>
+
+                    <div class="signature">
+                        <img src="${properties.sign}" alt="Signature" />
+                        <span class="label">हस्ताक्षर / Signature</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="body-right">
+            <div class="qr-section">
+                <img src="${properties.qr}" alt="QR Code" />
+            </div>
+            <div class="serial_num">
+                <p>03082019</p>
+            </div>
+        </div>
+    </div>
+</div>

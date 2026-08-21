@@ -1,0 +1,10 @@
+<sly data-sly-use.Model = "com.karthik.newsportal.core.models.TestSlingModel">
+    <sly data-sly-test = "${Model.getValidity}">
+    	<h2>ID: ${Model.getId}</h2>
+        
+        <ul data-sly-list.child = "${Model.getItemsList}">
+        	<li>${child.getName}</li>
+            <li>${child.getAge}</li>
+        </ul>
+    </sly>
+</sly>

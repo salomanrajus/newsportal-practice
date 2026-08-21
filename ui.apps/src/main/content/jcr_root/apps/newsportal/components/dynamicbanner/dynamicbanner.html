@@ -1,0 +1,50 @@
+<style>    
+	.cont {
+    	background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        gap: 3rem;
+        padding: 2rem 3rem;
+        color: white;
+    }
+    
+    .left {
+    	padding-inline: 2rem;
+    }
+    
+    .left-small {
+    	margin-block-start: 2rem;
+		display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.3rem;
+     }
+     
+     .left-small a {
+     	color: white;
+        font-weight: 700;
+     }
+     
+     .icon {
+     	height: 1.2rem;
+        width: auto;
+        vertical-align: baseline;  
+     }
+</style>
+
+
+<article class="cont">
+	<div class="left">
+    	<h1>${properties.heading}</h1>		<!-- Dynamic LIVE events -->
+		<p>${properties.desc}</p>		<!-- Dynamic LIVE events provide you with direct access to our Dynamic Investment teams—as they share valuable insights from today’s constantly-evolving markets.  -->
+        <div class="left-small">
+			<a href=${properties.hyperlink}>${properties.hyperlinkdesc} <img class="icon" src=${properties.icon}></a>
+            <!-- https://login.dynamic.ca/aos/das/login/login.bns 
+            	 Register for upcoming events -->
+        </div>
+    </div>
+    <div class="right">
+		<img src=${properties.image}>
+	</div>
+</article>

@@ -1,0 +1,30 @@
+<! -- Static Template Defintion -->
+<sly data-sly-template.officeDetails>
+	<div style="border: 1px solid blue; padding: 1rem; margin: 1rem;">
+    	<h2>Office Information</h2>
+		<p>Department: IT</p>
+		<p>Location: Banglore</p>
+	</div>	
+</sly>
+
+<! -- Static Template Call with Hardcoded values -->
+<sly data-sly-call = "${officeDetails}"></sly>
+
+<! ----------------------------------------->
+
+<!-- Dynamic Template Defintion-->
+<sly data-sly-template.authorCard = "${ @ fName, lName}">
+	<div style="border: 1px solid red; padding: 1rem; margin: 1rem;">
+		<h2>Author Information</h2>
+		<p>First Name: ${fName}</p>
+		<p>Last Name: ${lName}</p>
+	</div>	
+</sly>
+
+<!-- Dynamic Template Call #1: Initialized values from Touch UI Dialog -->
+<sly data-sly-call = "${authorCard @ fName=properties.firstName, lName=properties.lastName}"></sly>
+
+<!-- Dynamic Template Call #2:  Initialized values here itself -->
+<sly data-sly-call = "${authorCard @ fName='Anon', lName='Mox'}"></sly>
+
+

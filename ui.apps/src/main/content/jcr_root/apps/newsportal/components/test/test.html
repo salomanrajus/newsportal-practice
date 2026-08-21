@@ -1,0 +1,12 @@
+<h1>Pack ID: ${properties.id}</h1>
+<ul data-sly-list.ouF = "${resource.children}">
+	<sly data-sly-list.child = "${ouF.children}">
+    	<sly data-sly-list.inF = "${child.children}">
+			<sly data-sly-list.item = "${inF.children}">
+    			<li>Breed: ${item.properties.name}</li>
+    			<li>Age: ${item.properties.age}</li>
+                <br>
+   			</sly>
+		</sly>
+    </sly>
+</ul>

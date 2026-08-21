@@ -1,0 +1,13 @@
+<sly data-sly-use.Menu="com.karthik.newsportal.core.models.MenuItemsModel">
+	<div data-sly-test = "${!Menu.articleExpired}">
+        <h1>${Menu.text}</h1>
+        <p>${Menu.desc}</p>
+        <h1>${'yyyy-MM-dd' @ format=Menu.expireDate, type='date'}</h1>
+        
+        <ul data-sly-list.item="${Menu.getMenu}">
+    		<li> 
+        		<a href="${item.menuLink}">${item.menuText}</a>
+    		</li>
+		</ul>
+	</div>
+</sly>

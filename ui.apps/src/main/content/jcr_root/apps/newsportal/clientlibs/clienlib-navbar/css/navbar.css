@@ -1,0 +1,39 @@
+.cmp-navbar {
+    width: 100%;
+    padding: 16px 24px;
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+
+.cmp-navbar__list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cmp-navbar__link {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.cmp-navbar__link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .cmp-navbar__list {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+
+    .cmp-navbar__link {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,360 @@
+/* ============================================
+   GOOGLE FONT IMPORTS
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sumana:wght@400;700&display=swap');
+
+/* ============================================
+   PAN CARD STYLES - Pixel Perfect Match
+   ============================================ */
+.pan {
+    width: 570px;
+    height: 350px;
+    background: linear-gradient(135deg, #6bb3d9 0%, #5aa3cc 30%, #4a93bf 60%, #7ec3e3 100%);
+    border-radius: 8px;
+    padding: 12px 18px;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    color: #0d1b2a;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ============================================
+   GANDHI WATERMARK - Blue Outline
+   ============================================ */
+.pan::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-65%, -65%);
+    width: 280px;
+    height: 280px;
+    background: 
+        radial-gradient(ellipse at center, rgba(74, 147, 191, 0.12) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Gandhi watermark using CSS art - blue outline silhouette */
+.gandhi-watermark {
+    position: absolute;
+    top: 55%;
+    left: 58%;
+    transform: translate(-50%, -42%);
+    width: 200px;
+    height: 240px;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.10;
+}
+
+.gandhi-watermark::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 85px;
+    background: 
+        radial-gradient(ellipse 45% 55% at 50% 40%, transparent 40%, #3a7ca5 41%, #3a7ca5 43%, transparent 44%),
+        radial-gradient(ellipse 35% 40% at 50% 35%, transparent 35%, #3a7ca5 36%, #3a7ca5 38%, transparent 39%);
+    border-radius: 50% 50% 45% 45%;
+}
+
+
+/* ============================================
+   SUBTLE CLOUD WATERMARKS
+   ============================================ */
+.watermark-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.watermark-layer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(ellipse 70% 35% at 25% 85%, rgba(255,255,255,0.06) 0%, transparent 50%),
+        radial-gradient(ellipse 50% 45% at 85% 20%, rgba(255,255,255,0.05) 0%, transparent 45%),
+        radial-gradient(ellipse 60% 30% at 70% 80%, rgba(255,255,255,0.04) 0%, transparent 40%);
+}
+
+/* ============================================
+   HEADER - Pixel Perfect
+   ============================================ */
+.pan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2.5rem;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 8px;
+    padding: 0 5px;
+}
+
+.hin-left, .hin-right {
+    text-align: center;
+}
+
+.hin-right {
+	 margin: 0 0 0 -10px;
+     justify-self: end;
+     padding-left: 2rem;
+}
+
+
+/* Hindi headings - Sumana, tight letter spacing */
+.hin-right h2 {
+    font-size: 33px;
+    font-weight: 700;
+    margin: 0;
+    color: #0d1b2a;
+    letter-spacing: 0.8px;
+    font-family: 'Sumana', 'Mangal', serif;
+    line-height: 1.1;
+    width: 100%;
+}
+
+.hin-left h2 {
+    font-size: 34px;
+    font-weight: 700;
+    margin: 0;
+    color: #0d1b2a;
+    letter-spacing: 0.8px;
+    font-family: 'Sumana', 'Mangal', serif;
+    line-height: 1.1;
+    width: 100%;
+}
+
+/* English headings - PT Serif, wide letter spacing */
+.hin-left h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 4px 0 0 0;
+    color: #0d1b2a;
+    letter-spacing: -0.7px;
+    font-family: 'PT Serif', 'Georgia', serif;
+    text-transform: uppercase;
+}
+
+.hin-right h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    color: #0d1b2a;
+    letter-spacing: -0.7px;
+    font-family: 'PT Serif', 'Georgia', serif;
+    text-transform: uppercase;
+}
+
+/* Emblem - Blue colored, smaller size */
+.pan-header img {
+    width: 39px;
+    object-fit: contain;
+    padding: 0 6px 0 0 ;
+    color: #031570;
+    filter: brightness(0.7) sepia(1) hue-rotate(180deg) saturate(2) ;
+    opacity: 0.85;
+    padding-top: 2px;
+}
+
+/* ============================================
+   BODY LAYOUT
+   ============================================ */
+.pan-body {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    
+    gap: 10px;
+    padding: 0 5px;
+}
+
+.body-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.body-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 130px;
+    gap: 6px;
+}
+
+/* ============================================
+   PHOTO & PAN NUMBER SECTION
+   ============================================ */
+.photo_num {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 10px;
+    align-items: flex-start;
+}
+
+.photo_num > img {
+    width: 85px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 2px;
+    background: #f5f5f5;
+    box-shadow: 0.1px 0.1px 0.5rem 1px white;
+    border-radius: 10px;
+}
+
+.num {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 2px;
+    text-align: center;
+    font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+/* Hindi label - स्थायी लेखा संख्या कार्ड */
+.num h3:first-child {
+    font-size: 16px;
+    color: #031570;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+/* English label - Permanent Account Number Card */
+.num h4 {
+    font-size: 16px;
+    color: #031570;
+    margin: 0 0 2px 0;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* PAN Number - Large, bold, spaced */
+.num h3:last-child {
+    font-size: 22px;
+    font-weight: 800
+    color: #0d1b2a;
+    margin: 0;
+    font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+/* ============================================
+   DETAILS SECTION
+   ============================================ */
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Labels - Sumana + PT Serif mix */
+.label {
+    font-size: 13px;
+    color: #031570;
+    font-weight: 600;
+    margin-bottom: 1px;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    line-height: 1.1;
+    letter-spacing: -0.1px;
+}
+
+.label-dob {
+	padding-right: 5rem;
+    max-width: 100px;
+}
+
+/* Field values - Roboto */
+.field > div {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0d1b2a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    margin-top: -1px;
+}
+
+/* ============================================
+   DOB & SIGNATURE ROW
+   ============================================ */
+.dob_sign {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 4px;
+}
+
+.dob_sign .field > div {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    
+}
+
+.signature {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 40%;
+}
+
+.signature img {
+    width: 90px;
+    height: 30px;
+    object-fit: contain;
+}
+/* ============================================
+   RIGHT SIDE - QR & SERIAL (CLOSE TOGETHER)
+   ============================================ */
+
+.body-right {
+	display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.qr-section img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.serial_num {
+    margin: 0;
+    padding: 0;
+}
+
+.serial_num p {
+    font-size: 13px;
+    color: #0d1b2a;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    letter-spacing: -1px;
+    font-family: sans-serif;
+}

@@ -1,0 +1,14 @@
+<!--<div data-emptyText="Employee Details Component" class="cq-placeholder"></div>-->
+
+<sly data-sly-test=${properties.empName}>
+	<div class="cont4">
+        <p class="name">${properties.empName}</p>
+        <p class="age">${properties.age}</p>
+        <p class="phone-num">${properties.mobNumber}</p>
+        <p class="comp-name">${properties.compName}</p>
+        <p class="designation">${properties.designation}</p>
+	</div>
+</sly>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+<sly data-sly-call="${clientlib.css @ categories='newsportal.employeedetails'}">

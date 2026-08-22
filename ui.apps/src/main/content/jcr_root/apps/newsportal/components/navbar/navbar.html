@@ -1,0 +1,17 @@
+<nav class="cmp-navbar"
+     data-sly-use.model="com.karthik.newsportal.core.models.NavbarModel"
+     data-sly-test="${model.menuItems}">
+
+    <ul class="cmp-navbar__list"
+        data-sly-list.item="${model.menuItems}">
+
+        <li class="cmp-navbar__item">
+            <a class="cmp-navbar__link"
+               href=#"${item.menuLink}">
+                ${item.menuText}
+            </a>
+        </li>
+
+    </ul>
+
+</nav>

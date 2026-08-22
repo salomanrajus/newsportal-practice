@@ -1,0 +1,13 @@
+<h1>${properties.text}</h1>
+<p>${properties.desc}</p>
+<h1>${'yyyy-MM-dd' @ format=properties.expireDate, type='date'}</h1>
+
+<ul data-sly-list.child="${resource.children}">
+	<sly data-sly-test="${child.name == 'menu'}">
+		<sly data-sly-list.item="${child.children}">
+			<li>
+				<a href="${item.properties.menuLink}">${item.properties.menuText}</a>
+            </li>
+        </sly>
+	</sly>
+</ul>
